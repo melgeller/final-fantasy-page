@@ -70,20 +70,27 @@ nav a:hover {
 
 .blackbox {
   width: 60vw;
-  height: vh;
   background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 
   border: 1px solid palegoldenrod;
+  @media (max-width: 700px) {
+  width: 90vw;
+  }
 }
 
 .section2 {
+  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./assets/fondoabout.jpg);
   background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media (max-width: 700px) {
+  
+  }
 }
 .abouttxt1 {
   margin: 20px;
@@ -95,6 +102,10 @@ nav a:hover {
   margin: 60px;
   margin-top: 60px;
   margin-bottom: 80px;
+  @media (max-width: 700px) {
+  margin: 30px;
+  text-align: justify;
+  }
 }
 
 .section2 img {
