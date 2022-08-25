@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
-
 * {
   list-style: none;
   margin: 0;
@@ -11,17 +10,43 @@
 
 .nav-logo {
   width: 40px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
-.home {
-  position: absolute;
+@media (max-width: 700px) {
+  .nav-logo {
+    margin-left: 0px;
+    padding: 5px;
+  }
+}
+
+.navbar {
   width: 100%;
-  max-width: 100%;
+  position: absolute;
   background-color: #6d6875;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav a {
@@ -34,36 +59,33 @@ nav a {
 nav a:hover {
   background-color: #b5838d;
   padding: 10px;
+  -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
 }
 
-nav ul {
-  display: flex;
-  gap: 15px;
-  margin: 10px;
-  margin-bottom: 15px;
-}
-
-.section-container {
-  margin: 0;
-  padding: 0;
-  max-width: 100vw;
-  min-height: 100vh;
-}
-
 .section1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/ff7wall.jpg);
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/ff7wall.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/ff7wall.jpg);
   background-size: cover;
+  background-position: center;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .textfront {
   text-align: center;
 }
+
 .title {
   font-size: 3.5rem;
 }
@@ -72,19 +94,25 @@ nav ul {
   width: 60vw;
   height: vh;
   background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-
   border: 1px solid palegoldenrod;
 }
 
 .section2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/fondoabout.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/fondoabout.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/fondoabout.jpg);
   background-size: cover;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .abouttxt1 {
   margin: 20px;
   margin-top: 70px;
@@ -99,38 +127,56 @@ nav ul {
 
 .section2 img {
   width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px;
   margin-right: 5px;
 }
 
 .footabout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .footabout p {
   margin-bottom: 10px;
   color: transparent;
 }
+
 .section3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/amano.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/amano.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/amano.jpg);
   background-size: cover;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .imagenlist {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/amano2.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/amano2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/amano2.jpg);
   background-size: cover;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   max-width: 100vw;
@@ -153,37 +199,50 @@ nav ul {
   margin-right: 50px;
 }
 
-.titlelist1{
+.titlelist1 {
   margin-bottom: 30px;
 }
 
-.footlist img{
+.footlist img {
   width: 50px;
 }
-.footlist{
+
+.footlist {
   margin-top: 130px;
-  
 }
-.column1{
+
+.column1 {
   margin: 60px;
 }
-.margintxt{
+
+.margintxt {
   margin-bottom: 30px;
 }
 
 .frontgallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: x-large;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 20px;
 }
 
 .ffimg {
   width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .ffimg img {
@@ -196,21 +255,30 @@ nav ul {
 }
 
 .newsbackg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/ffxwall.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/ffxwall.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/ffxwall.jpg);
   background-size: cover;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   max-width: 100vw;
   min-height: 100vh;
 }
+
 .titlenews {
   font-size: 3.5rem;
 }
+
 .titulos2 {
   text-align: center;
   margin: 20px;
@@ -225,8 +293,13 @@ nav ul {
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 100px;
   width: 40%;
 }
@@ -237,6 +310,18 @@ input {
   border-radius: 20px;
   height: 30px;
   padding: 5px;
+}
+
+input::-webkit-input-placeholder {
+  padding-left: 15px;
+}
+
+input:-ms-input-placeholder {
+  padding-left: 15px;
+}
+
+input::-ms-input-placeholder {
+  padding-left: 15px;
 }
 
 input::placeholder {
@@ -253,14 +338,23 @@ input::placeholder {
 }
 
 .maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 70%;
 }
 
 .right-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 100px;
   width: 40%;
 }
@@ -268,6 +362,7 @@ input::placeholder {
 .title-right-container {
   color: palegoldenrod;
 }
+
 .subtitle-right-container {
   border-bottom: 2px solid palegoldenrod;
   margin-bottom: 25px;
@@ -281,3 +376,4 @@ input::placeholder {
 a:visited {
   color: palegoldenrod;
 }
+/*# sourceMappingURL=index.css.map */
