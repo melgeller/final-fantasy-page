@@ -342,6 +342,12 @@ nav a:hover {
   min-height: 100vh;
 }
 
+@media (max-width: 700px) {
+  .newsbackg {
+    background-position: center;
+  }
+}
+
 .titlenews {
   font-size: 3.5rem;
 }
@@ -353,10 +359,25 @@ nav a:hover {
 
 .newsbox {
   width: 40vw;
-  height: vh;
   background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   border-bottom: 1px solid palegoldenrod;
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .newsbox {
+    width: 80vw;
+    margin-top: 20px;
+  }
 }
 
 .form {
@@ -367,11 +388,39 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 100px;
   width: 40%;
 }
 
-input {
+.form input::-webkit-input-placeholder {
+  padding-left: 15px;
+}
+
+.form input:-ms-input-placeholder {
+  padding-left: 15px;
+}
+
+.form input::-ms-input-placeholder {
+  padding-left: 15px;
+}
+
+.form input::placeholder {
+  padding-left: 15px;
+}
+
+@media (max-width: 700px) {
+  .form {
+    min-width: 250px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.input {
   margin: 10px;
   border: 2px solid palegoldenrod;
   border-radius: 20px;
@@ -379,29 +428,32 @@ input {
   padding: 5px;
 }
 
-input::-webkit-input-placeholder {
-  padding-left: 15px;
+@media (max-width: 700px) {
+  .input {
+    min-width: 300px;
+  }
 }
 
-input:-ms-input-placeholder {
-  padding-left: 15px;
+.botonesform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin: 20px;
 }
 
-input::-ms-input-placeholder {
-  padding-left: 15px;
-}
-
-input::placeholder {
-  padding-left: 15px;
+.botonesform input {
+  width: 30px;
 }
 
 .submit-button {
   margin: 10px;
   margin-top: 30px;
-  max-width: 25%;
+  width: 150px;
   border: 2px solid palegoldenrod;
   border-radius: 8px;
   height: 30px;
+  background-color: palegoldenrod;
 }
 
 .maincontainer {
@@ -411,7 +463,20 @@ input::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 70%;
+}
+
+@media (max-width: 700px) {
+  .maincontainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .right-container {
@@ -424,6 +489,12 @@ input::placeholder {
           flex-direction: column;
   margin-top: 100px;
   width: 40%;
+}
+
+@media (max-width: 700px) {
+  .right-container {
+    min-width: 250px;
+  }
 }
 
 .title-right-container {
