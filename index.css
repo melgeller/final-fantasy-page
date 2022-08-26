@@ -187,8 +187,8 @@ nav a:hover {
 }
 
 .imagenlist {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/amano2.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/amano2.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(./assets/amano2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/amano2.jpg);
   background-size: cover;
   color: white;
   display: -webkit-box;
@@ -205,20 +205,31 @@ nav a:hover {
   min-height: 100vh;
 }
 
+@media (max-width: 700px) {
+  .imagenlist {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .boxeslist1 {
   background-color: #fefae0;
   color: black;
-  width: 40vw;
-  height: 80vh;
-  margin-left: 50px;
+  margin: 20px;
+  max-width: 554px;
 }
 
 .boxeslist2 {
   background-color: #fefae0;
   color: black;
-  width: 40vw;
-  height: 80vh;
-  margin-right: 50px;
+  min-height: 861px;
+  margin: 20px;
 }
 
 .titlelist1 {
@@ -235,6 +246,7 @@ nav a:hover {
 
 .column1 {
   margin: 60px;
+  background-color: #fefae0;
 }
 
 .margintxt {
