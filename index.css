@@ -8,6 +8,10 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 .nav-logo {
   width: 40px;
   margin-left: 20px;
@@ -57,8 +61,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #b5838d;
-  padding: 10px;
+  color: rgba(255, 255, 255, 0.281);
   -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
 }
@@ -82,12 +85,16 @@ nav a:hover {
   text-align: center;
 }
 
+.titulos {
+  margin: 20px;
+}
+
 .textfront {
   text-align: center;
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 3.5em;
 }
 
 .blackbox {
@@ -163,8 +170,9 @@ nav a:hover {
 }
 
 .section3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/amano.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/amano.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./assets/amano1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/amano1.jpg);
+  background-attachment: fixed;
   background-size: cover;
   color: white;
   display: -webkit-box;
@@ -173,9 +181,9 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .imagenlist {
@@ -248,8 +256,27 @@ nav a:hover {
   margin: 20px;
 }
 
+.whiteboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 700px) {
+  .whiteboxes {
+    height: auto;
+  }
+}
+
 .ffimg {
-  width: 1200px;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,11 +284,25 @@ nav a:hover {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
 }
 
 .ffimg img {
-  width: 200px;
+  width: 300px;
   margin: 10px;
+}
+
+@media (max-width: 700px) {
+  .ffimg img {
+    width: 90%;
+  }
+}
+
+.footabout {
+  width: 100%;
 }
 
 .footabout img {
